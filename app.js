@@ -3,6 +3,7 @@ const userName = document.querySelector('.userName');
 const crushName = document.querySelector('.crushName');
 const crushPercentage = document.querySelector('.crushPercentage');
 const reminder = document.getElementsByClassName('reminder');
+const crushMessage = document.querySelector('.crushMessage');
 
 btnGenerate.addEventListener('click', function () {
 	var crushChance = Math.floor(Math.random() * 100) + 1;
@@ -29,20 +30,15 @@ btnGenerate.addEventListener('click', function () {
 			crushName.value = '';
 			crushPercentage.textContent = `Hi ${userNameValue}! Your crush ${crushNameValue} has ${crushChance}% chance that likes you too!`;
 			if (crushChance >= 1 && crushChance <= 20) {
-				//You crush doesn't like you. Face it. :>
-				console.log("You crush doesn't like you. Face it. :>");
+				crushMessage.textContent = `You crush doesn't like you. Face it. :>`;
 			} else if (crushChance >= 21 && crushChance <= 40) {
-				console.log('You have a chance. But it is one a million');
+				crushMessage.textContent = `You have a chance. But it is one a million`;
 			} else if (crushChance >= 41 && crushChance <= 60) {
-				console.log('GO OUT NOW!! YOU MIGHT HAVE A CHANCE!!');
+				crushMessage.textContent = `GO OUT NOW!! YOU MIGHT HAVE A CHANCE!!`;
 			} else if (crushChance >= 61 && crushChance <= 80) {
-				console.log(
-					'Your crush defenitely likes you. But you are too shy bruh'
-				);
+				crushMessage.textContent = `Your crush defenitely likes you. But you are too shy bruh`;
 			} else if (crushChance >= 81 && crushChance <= 100) {
-				console.log(
-					'YOUR CRUSH REALLY REALLY LIKES YOU!! GO OUT NOW AND ASK YOUR CRUSH ON A DATE'
-				);
+				crushMessage.textContent = `YOUR CRUSH REALLY REALLY LIKES YOU!! GO OUT NOW AND ASK YOUR CRUSH ON A DATE`;
 			}
 		}
 	}
