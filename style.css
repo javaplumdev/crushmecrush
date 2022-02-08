@@ -1,0 +1,110 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url('./web-images/background-web.png');
+	background-size: cover;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	width: 50%;
+	border-radius: 20px;
+	background-color: #fff;
+	padding: 1em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.usersInput {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.usersInput input,
+button {
+	padding: 12px;
+	font-size: 18px;
+	margin: 5px;
+	width: 50%;
+	border: none;
+	border-radius: 10px;
+}
+
+.usersInput input {
+	background-color: #f1f1f1;
+}
+
+.reminder,
+.crushPercentage {
+	color: #e83f1a;
+	font-size: 14px;
+	padding: 0.5em;
+}
+
+.crushPercentage {
+	margin-top: 2em;
+}
+
+.usersInput button {
+	background-color: #e83f1a;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s ease-in;
+}
+
+.usersInput button:hover {
+	background-color: #c33110;
+}
+
+.container h1 {
+	padding: 0.5em;
+	text-align: center;
+	color: #e83f1a;
+	font-size: 32px;
+}
+
+@media only screen and (max-width: 1240px) {
+	.usersInput input,
+	button {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.container {
+		width: 95%;
+		padding: 0.5em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.usersInput {
+		padding: 0.5em;
+	}
+
+	.container h1 {
+		font-size: 22px;
+	}
+
+	.usersInput input,
+	button {
+		padding: 14px;
+		font-size: 14px;
+		margin: 3px;
+		width: 80%;
+		border: none;
+		border-radius: 10px;
+	}
+}
